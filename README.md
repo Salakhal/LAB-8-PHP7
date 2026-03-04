@@ -45,4 +45,36 @@ L'application utilise plusieurs composants clés :
 | `/logout` | POST | Authentifié |
 
 ---
-*Réalisé dans le cadre du module Développement Web PHP.*
+---
+
+## 📂 Livrables du Projet
+Cette section récapitule les éléments requis pour la validation du **Lab 8**.
+
+### 1. Documentation Technique
+Les rapports détaillés sont accessibles via les liens suivants :
+* 📄 **[Rapport de Réalisation (Lab 8)](./docs/rapport_lab8.md)** : Analyse technique et choix d'architecture.
+* 🧪 **[Plan de Tests de Sécurité](./docs/test_security.md)** : Vérification des vulnérabilités (Auth, Middleware, CSRF).
+
+### 2. Galerie de Preuves (Captures d'écran)
+Voici les captures illustrant le fonctionnement et la sécurité de l'application :
+
+| Fonctionnalité | Aperçu Visuel |
+| :--- | :--- |
+| **Authentification** | ![Login](./screenshots/login.png) |
+| **Annuaire & Recherche** | ![Liste](./screenshots/liste_recherche.png) |
+| **Création Protégée** | ![Création](./screenshots/creation.png) |
+| **Sécurité (403 CSRF)** | ![CSRF Error](./screenshots/csrf_error.png) |
+
+### 3. Arborescence du Projet
+Structure simplifiée du code source livré :
+```text
+.
+├── src/
+│   ├── Controller/      # Logique de contrôle (Auth, Etudiant)
+│   ├── Dao/             # Accès aux données (AdminDao, EtudiantDao)
+│   ├── Security/        # Middleware, CSRF, Auth
+│   └── Container/       # AppFactory (Injection de dépendances)
+├── views/               # Templates PHP (Layout, Login, Etudiant)
+├── docs/                # Documentation (Rapports et Tests)
+├── public/              # Point d'entrée (index.php, CSS)
+└── README.md            # Présentation du projet
