@@ -55,26 +55,75 @@ Les rapports détaillés sont accessibles via les liens suivants :
 * 📄 **[Rapport de Réalisation (Lab 8)](./docs/rapport_lab8.md)** : Analyse technique et choix d'architecture.
 * 🧪 **[Plan de Tests de Sécurité](./docs/test_security.md)** : Vérification des vulnérabilités (Auth, Middleware, CSRF).
 
-### 2. Galerie de Preuves (Captures d'écran)
-Voici les captures illustrant le fonctionnement et la sécurité de l'application :
 
-| Fonctionnalité | Aperçu Visuel |
-| :--- | :--- |
-| **Authentification** | ![Login](./screenshots/login.png) |
-| **Annuaire & Recherche** | ![Liste](./screenshots/liste_recherche.png) |
-| **Création Protégée** | ![Création](./screenshots/creation.png) |
-| **Sécurité (403 CSRF)** | ![CSRF Error](./screenshots/csrf_error.png) |
 
-### 3. Arborescence du Projet
+### 2. Arborescence du Projet
 Structure simplifiée du code source livré :
 ```text
 .
-├── src/
-│   ├── Controller/      # Logique de contrôle (Auth, Etudiant)
-│   ├── Dao/             # Accès aux données (AdminDao, EtudiantDao)
-│   ├── Security/        # Middleware, CSRF, Auth
-│   └── Container/       # AppFactory (Injection de dépendances)
-├── views/               # Templates PHP (Layout, Login, Etudiant)
-├── docs/                # Documentation (Rapports et Tests)
-├── public/              # Point d'entrée (index.php, CSS)
-└── README.md            # Présentation du projet
+PhpProject8/
+├── docs/                      # Documentation technique
+│   ├── rapport_lab8.md        # Rapport de réalisation détaillé
+│   └── test_security.md       # Plan de tests et validation
+├── logs/                      # Journaux d'erreurs et d'activités
+├── public/                    # Dossier racine web
+│   └── index.php              # Point d'entrée de l'application
+├── src/                       # Code source (Logique métier)
+│   ├── Container/
+│   │   └── AppFactory.php     # Configuration et Injection de dépendances
+│   ├── Controller/
+│   │   ├── AuthController.php # Gestion Login/Logout
+│   │   ├── BaseController.php # Contrôleur parent (View/Response)
+│   │   └── EtudiantController.php # CRUD Étudiants protégé
+│   ├── Core/                  # Noyau du Framework MVC
+│   │   ├── Request.php
+│   │   ├── Response.php
+│   │   ├── Router.php
+│   │   └── View.php
+│   ├── Dao/                   # Data Access Objects (Requêtes SQL)
+│   │   ├── AdminDao.php
+│   │   ├── DBConnection.php
+│   │   ├── EtudiantDao.php
+│   │   ├── FiliereDao.php
+│   │   └── Logger.php
+│   └── Security/              # Couche de sécurité
+│       ├── Auth.php           # Logique de session
+│       ├── Csrf.php           # Protection jetons CSRF
+│       ├── Middleware.php     # Gardien des accès (requireAdmin)
+│       ├── Sanitizer.php      # Nettoyage des inputs
+│       └── Validator.php      # Validation des données
+├── views/                     # Templates de l'interface
+│   ├── auth/
+│   │   └── login.php          # Formulaire de connexion
+│   ├── etudiant/
+│   │   ├── create.php         # Formulaire d'ajout
+│   │   ├── edit.php           # Formulaire de modification
+│   │   ├── index.php          # Liste des étudiants (Annuaire)
+│   │   └── show.php           # Détails d'un étudiant
+│   └── layout.php             # Template principal (Header/Footer)
+└── README.md                  # Documentation globale du projet
+
+```
+
+### 3. Galerie de Preuves (Captures d'écran)
+Voici les captures illustrant le fonctionnement et la sécurité de l'application :
+
+## 1. Authentification (Page Login)
+
+<img width="874" height="408" alt="image" src="https://github.com/user-attachments/assets/3b5a84b8-2d28-4024-80d3-6641d453d129" />
+
+ 
+## 2. Annuaire & Recherche (Liste des Étudiants)
+
+<img width="896" height="819" alt="image" src="https://github.com/user-attachments/assets/5f8a43ce-d93c-45c3-a596-a0ad0449ddb5" />
+
+
+## 3. Création Protégée (Formulaire Ajout)
+
+<img width="846" height="779" alt="image" src="https://github.com/user-attachments/assets/a19c1b3d-2b20-4224-943c-884d323da08d" />
+
+
+
+## 4. Sécurité (Erreur 403 CSRF)
+
+
