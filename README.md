@@ -129,5 +129,18 @@ Voici les captures illustrant le fonctionnement et la sécurité de l'applicatio
 <img width="816" height="403" alt="image" src="https://github.com/user-attachments/assets/40eebb68-6792-4c6a-8f03-daee85272583" />
 
 
+## 👤 Auteur
+
+* **École Normale Supérieure de Marrakech**
+  
+* **Réalisé par :** SALMA LAKHAL
+  
+* **Filière  :** CLE_INFO_S5
+  
+* **Année universitaire :** 2025/2026
+  
+* **Encadré par :** Pr. Mohamed LACHGAR
+
+* **Cours :*** Ingénierie Logicielle Web avec PHP 7 : Architecture Multicouche et Accès aux Données Sécurisé
 
 
