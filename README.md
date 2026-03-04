@@ -126,4 +126,8 @@ Voici les captures illustrant le fonctionnement et la sécurité de l'applicatio
 
 ## 4. Sécurité (Erreur 403 CSRF)
 
+<img width="816" height="403" alt="image" src="https://github.com/user-attachments/assets/40eebb68-6792-4c6a-8f03-daee85272583" />
+
+
+
 
